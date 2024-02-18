@@ -5,4 +5,4 @@ set GOOS=linux
 set GOARCH=amd64
 go build -tags -o bootstrap main.go
 del main.zip
-tar.exe -a -cf -o main.zip bootstrap
+%USERPROFILE%\Go\bin\build-lambda-zip.exe -o myFunction.zip bootstrap
