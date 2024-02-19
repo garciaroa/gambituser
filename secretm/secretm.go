@@ -17,7 +17,7 @@ func GetSecret(nombreSecret string) (models.SecretRDSJson, error) {
 	svc := secretsmanager.NewFromConfig(awsgo.Cfg)
 	clave, err := svc.GetSecretValue(awsgo.Ctx, &secretsmanager.GetSecretValueInput{SecretId: aws.String(nombreSecret)})
 	if err != nil {
-		fmt.Println(err.Error())
+		fmt.Println("> 20-secretm:" + err.Error())
 		return datosSecret, err
 	}
 
